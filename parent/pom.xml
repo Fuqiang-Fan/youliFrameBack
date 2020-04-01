@@ -9,12 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
-    <modules>
-        <module>web</module>
-        <module>dao</module>
-        <module>core</module>
-    </modules>
-
 
     <!--自定义变量-->
     <properties>
