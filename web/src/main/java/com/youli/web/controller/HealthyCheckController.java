@@ -17,6 +17,6 @@ public class HealthyCheckController {
     @RequestMapping(value = "/healthyCheck/check", method = RequestMethod.GET)
     public Res<Integer> check() {
         //return Res.sucess(new Integer(3));
-        return Res.buildRes("33","22", new Integer(22111));
+        return Res.buildRes("33", "22", new Integer(22111));
     }
 }

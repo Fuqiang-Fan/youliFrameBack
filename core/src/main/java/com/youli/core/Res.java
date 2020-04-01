@@ -21,6 +21,7 @@ public class Res<T> {
 
     private Res() {
     }
+
     private Res(String code, String msg, T result) {
         this.code = code;
         this.msg = msg;
@@ -39,27 +40,31 @@ public class Res<T> {
         return result;
     }
 
-    public static Res sucess(){
+    public static Res sucess() {
         return sucess(DEFAULT_SUCESS_MSG);
     }
-    public static Res sucess(String msg){
+
+    public static Res sucess(String msg) {
         return sucess(msg, null);
     }
-    public static<T> Res<T> sucess(String msg, T result){
+
+    public static <T> Res<T> sucess(String msg, T result) {
         return new Res(SUCESS_CODE, msg, result);
     }
 
-    public static Res fail(){
+    public static Res fail() {
         return fail(DEFAULT_FAIL_MSG);
     }
-    public static Res fail(String msg){
+
+    public static Res fail(String msg) {
         return fail(msg, null);
     }
-    public static<T> Res<T> fail(String msg, T result){
+
+    public static <T> Res<T> fail(String msg, T result) {
         return new Res(FAIL_CODE, msg, result);
     }
 
-    public static <T> Res<T> buildRes(String code, String msg, T resut){
+    public static <T> Res<T> buildRes(String code, String msg, T resut) {
         return new Res<>(code, msg, resut);
     }
 }
